@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop TEN11</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="
+    sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="
+    sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(185, 185, 185);
+            position: sticky; 
+            top: 0px; 
+            z-index: 10;
+        }
+        .header{
+            width: 80%;
+            height: 100%;
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding-top: 20px;
+            margin: auto;
+            position: sticky;
+           
+        }
+        .header .menu{
+            width: 30%;
+            height: 100%;
+            /* background-color: antiquewhite; */
+            display: flex;
+            justify-content:start;
+            text-align: center;
+        }
+        .header .menu i{
+            font-size: 26px;
+            cursor: pointer;
+        }
+        .header .logo {
+            /* background-color: aquamarine; */
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: start;
+            text-align: center;
+        }
+        .header .logo img{
+            width: 180px;
+        }
+        .header .sub-menu{
+            /* background-color: azure; */
+            width: 30%;
+            display: flex;
+            justify-content: start;
+            text-align: center;
+            gap: 30px;
+        }
+        .header .sub-menu i {
+            font-size: 20px;
+        }
+        
+        #staticBackdrop{
+            position: absolute;
+            top: 200px;
+            position: fixed;
+        }
+        .about{
+            background-color: rgb(3, 90, 61);
+            width: 100%;
+            height: 170px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .about p{
+            font-size: 20px;
+            color: aliceblue;
+        }
+        .furs_card{
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 30px;
+            
+        }
+        .contant{
+            width: 100%;
+            margin: auto;
+            display: flex;
+            
+           
+            
+        }
+         .card{
+            /* width: 500px; */
+            margin-left: 20px;
+            margin-top: 10px;
+            padding: 2px;
+           
+        }
+        .card .image{
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            
+
+        }
+        .card  img{
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            
+        }
+        .card img:hover{
+            transform: scale(1.05);
+            transition: 400ms;
+            /* filter: grayscale(1); */
+            
+        }
+        .card .bady{
+            background-color: rgb(227, 230, 227);
+            padding: 10px;
+            
+        } 
+        .card .bady{
+            position: relative;
+        }
+        .prices a{
+            position: absolute;
+            margin-left: 300px;
+            margin-top: -25px;
+        }
+        .befor{
+            text-align: center;
+            margin: auto;
+            display: block;
+        }
+        .footer{
+            width: 100%;
+            margin: auto;
+            display: flex;
+            background-color: #0e6797;
+            margin-top: -35px;
+        }
+        
+        .after .caption{
+            background-color: #08f934;
+
+
+        }
+        
+        .after i:hover{
+            color: #000;
+        }
+        .sub-menu i:hover{
+            color: #08f934;
+        }
+        .sub-menu h5:hover{
+            color: #f90808;
+        }
+        .desription button:hover{
+            color: #08f934;
+        }
+        @media (max-width: 575.98px){
+            header{
+            width: 100%;
+            height: 80px;
+
+
+        }
+            .header .menu{
+            width: 30%;
+            height: 100%;
+            /* background-color: antiquewhite; */
+            display: flex;
+            text-align: center;
+            margin-right: 10px;
+            padding-right: 10px;
+            
+        }
+            .header .menu i{
+            font-size: 25px;
+            cursor: pointer;
+            
+        }
+        .header .logo {
+          
+            width: 40%;
+            height: 100%;
+            display: flex;
+            text-align: center;
+            margin-right: 30px;
+            padding-right: 10px;
+        }
+        .header .logo img{
+            width: 90px;
+        }
+        .header .sub-menu{
+           
+            width: 30%;
+            display: flex;
+            text-align: center;
+            gap: 15px;
+            margin-right: 90px;
+            padding-right: 10px;
+        }
+        .login{
+            margin-right: 20px;
+            padding-right: 500px;
+        }
+        .header .sub-menu i {
+            font-size: 20px;
+        }
+        .about{
+            background-color: rgb(3, 90, 61);
+            width: 100%;
+            height:170px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .about p{
+            font-size: 15px;
+            color: aliceblue;
+        }
+        .furs_card ul h5{
+            font-size: 15px;
+        }
+        .furs_card{
+            
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 15px;
+            
+        }
+        .title h3{
+            font-size: 15px;
+        }
+        /* .contant{
+            width: 100%;
+            margin: auto;
+            display: flex;
+            display: grid;
+       
+            
+        } */
+        .card{
+            width: 100%;
+            margin: auto;
+        }
+       .card .bady{
+            background-color: rgb(227, 230, 227);
+            padding: 10px;
+            box-shadow:none;
+            
+        } 
+        .card .image{
+            width: 100%;
+            height: 250px;
+            box-shadow: none;
+            overflow: hidden;
+            border-radius: 10px 10px 0px 0px  ;
+
+        }
+        .card .image img{
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            
+        }
+        .card .bady{
+            position: relative;
+        }
+        .prices a{
+            position: absolute;
+            margin-left: 130px;
+            margin-top: -25px;
+        }
+        .prices h6{
+            font-size: 12px; 
+        }
+        .desription p{
+            font-size: 12px;  
+        }
+        .footer{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: start;
+            margin-top: -35px;
+        }
+
+        
+        .after h5{
+            font-size: 10px;
+           
+        }
+        .after{
+            font-size: 9px;
+        }
+        .after2{
+            font-size: 9px;
+        }
+       
+         .after2 img{
+            margin-right: 50px;
+            width: 100%;
+        }
+        
+        .befor{
+            margin-bottom: 30px;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+        .befor img{
+            width: 100%;
+        }
+        .dropdown{
+            width: 100px;
+            padding-right: 500px;
+        }
+        .login ul{
+            width: 50%;
+            padding: 20px;
+           
+        }
+
+        }
+        
+        
+        .login ul{
+            width: 100%;
+            padding: 20px;
+        }
+        .dropdown{
+            width: 400px;
+            padding-right: 500px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="header">
+                <div class="menu" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="logo">
+                     <img src="logoten11.png" alt="">
+                </div>
+                <div class="sub-menu">
+                    <div class="search"> <U><i class="fa-solid fa-magnifying-glass"></i> Search </U></div>
+                    <div class="noti"><i class="fa-solid fa-bell"></i></div>
+                    <div class="setting"><i class="fa-solid fa-gear"></i></div>
+                    <div class="login">
+                        <div class="dropdown">
+                            <button type="submit" class="btn"> <a href="test.html">Login</a></button></a>
+                            <!-- <button class="btn btn-secondary " type="button" id="information" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="test.html">login</a>
+                                <h5>Login</h5>
+                            </button> -->
+                            
+                            <!-- <ul class="dropdown-menu" aria-labelledby="formin">
+                                <a href="test.html"></a>
+                              <li><div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Full Name">
+                            </div></li>
+                              <li><div class="mb-3">
+                                <label for="Email1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" placeholder="E-mail address">
+                            </div></li>
+                              <li><div class="mb-3">
+                                <label for="name" class="form-label">Positoin</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="positoin">
+                            </div></li>
+                              <li><div class="mb-3">
+                                <label for="Password1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="Password1" placeholder="Password">
+                            </div></li>
+                              <li><div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="Check1">
+                                <label class="form-check-label" for="Check1">Check me out</label>
+                            </div></li>
+                            </ul> -->
+                            
+                          </div>
+                    </div>
+                </div>  
+            </div>
+ 
+        </div>
+    </header>
+     <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Shop Preference</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Select a category you prefer. You can change this later in the Settings.</p>
+          <div class="catagery">
+            <input type="radio" name="gender" id="" class="mx-3"><a href="women.html">Women</a><br>
+            <input type="radio" name="gender" id="" class="mx-3"><a href="men.html">Men</a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary w-75 m-auto my-3" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <section>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="discoun1.jpg" class="d-block w-100" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="discoun2.jpg" class="d-block w-100" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="discoun3.jpg" class="d-block w-100" alt="">
+              </div>
+            </div>
+          </div>
+    </section>
+    <tbody>
+        <div class="about">
+            <p>🛒FREE Cash Voucher 🛍<br>
+                $3 Voucher on min spend of $40 ( Use code AUG03)<br>
+                $5 Voucher on min spend of $50 ( Use code AUG05)<br>
+                $10 Voucher on min spend of $80 (use code AUG10)<br>
+                Available only on Mobile App & Website📲</p>
+        </div>
+        <div class="furs_card">
+              <div class="card" style="width: 600px;">
+                <img src="girl.jpg" class="card-img-top" alt="">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><h5>Women Collection</h5></li>
+                </ul>
+              </div>
+              <div class="card" style="width: 600px;">
+                <img src="g_boy.jpg" class="card-img-top" alt="">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><h5>Men Collection</h5></li>
+                </ul>
+              </div>
+            </div>
+            <div class="title">
+                <h3>This Week's Highlights</h3>
+            </div>
+            <div class="container-fluid my-5 ">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten1.jpg" alt="">
+                            </div>    
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$30.55</del> Price : $29.95</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>Cropped Jacket</p>  
+                                    <a href="" style="color: #000;"><i class="fa-solid  fa-square"></i></a>
+                                    <a href="" style="color: #c21285;"><i class="fa-solid  fa-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten2.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$25.30</del> Price : $21.59</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a></div>
+                                    <div class="desription"> 
+                                        <p>Mini Dress</p>  
+                                        <a href="" style="color: #ffffff;"><i class="fa-solid  fa-square"></i></a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten3.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$30.10</del> Price : $18.70</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>Knitted T-Shirt</p>  
+                                    <a href="" style="color: #ed46da;"><i class="fa-solid  fa-square"></i></a>
+                                    <a href="" style="color: #ffffff;"><i class="fa-solid  fa-square"></i></a> 
+                                    <a href="" style="color: #000;"><i class="fa-solid  fa-square"></i></a> 
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten4.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$32.65</del> Price : $26.55</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>Mini Dress</p>  
+                                    <a href="" style="color: #ffffff;"><i class="fa-solid  fa-square"></i></a>
+                                    <a href="" style="color: #847676;"><i class="fa-solid  fa-square"></i></a>  
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten5.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$20.45</del> Price : $13.98</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>T-Shirt With Print</p>  
+                                    <a href="" style="color: #000;"><i class="fa-solid  fa-square"></i></a>
+                                    <a href="" style="color: #ffffff;"><i class="fa-solid  fa-square"></i></a>  
+                                    <a href="" style="color: #bca5a5;"><i class="fa-solid  fa-square"></i></a>  
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten6.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$25.65</del> Price : $23.56</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>Basketball T-Shirt With Print</p>  
+                                    <a href="" style="color: #ea2626;"><i class="fa-solid  fa-square"></i></a>
+                                    <a href="" style="color: #ffffff;"><i class="fa-solid  fa-square"></i></a> 
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten7.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$29.45</del> Price : $25.89</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>Sweatpants With Print</p>  
+                                    <a href="" style="color: #000;"><i class="fa-solid  fa-square"></i></a>
+                                    <a href="" style="color: #fff7f7;"><i class="fa-solid  fa-square"></i></a>
+                                    <a href="" style="color: #837c7c;"><i class="fa-solid fa-square"></i></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten8.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$32.20</del> Price : $29.30</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>Ripped Denim Shorts</p>  
+                                    <a href="" style="color: #9fb3e0;"><i class="fa-solid fa-square"></i></a>
+                                    <a href="" style="color: #696bdd;"><i class="fa-solid fa-square"></i></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten9.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$40.20</del> Price : $39.10</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>Cropped T-Shirt</p>  
+                                    <a href="" style="color: #352da2;"><i class="fa-solid fa-square"></i></a>
+                                    <a href="" style="color: #1f9b30;"><i class="fa-solid fa-square"></i></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten10.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$27.70</del> Price : $24.90</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>Relaxed Fit Trouser</p>  
+                                    <a href="" style="color: #837c7c;"><i class="fa-solid fa-square"></i></a>
+                                    <a href="" style="color: #a8a464;"><i class="fa-solid fa-square"></i></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten11.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$35.80</del> Price : $27.90</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a> 
+                                </div>
+                                <div class="desription"> 
+                                    <p>Knitted Dress</p>  
+                                    <a href="" style="color: #000000;"><i class="fa-solid fa-square"></i></a>
+                                    <a href="" style="color: #151956;"><i class="fa-solid fa-square"></i></a>
+                                    <a href="" style="color: #938d8d;"><i class="fa-solid fa-square"></i></a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="card">
+                            <div class="image">
+                                <img src="ten12.jpg" alt="">
+                            </div>
+                            <div class="bady">
+                                <div class="prices"><h6 style="color: rgb(240, 8, 8);"><del style="color: #868181;">$32.20</del> Price : $24.65</h6>
+                                    <a href=""><i class="fa-regular fa-bookmark"></i></a>
+                                </div>
+                                <div class="desription"> 
+                                    <p>Unisex Relaxed T-shirt</p> 
+                                    <div style="display: flex; flex-direction: row; align-items: center; margin-top: 4px;">
+                                        <div class="ProductDesc_borderColor__312-o" style="background-color: rgb(255, 0, 0);"></div>
+                                    </div>
+                                    <a href="" style="color: #837c7c;"><i class="fa-solid fa-square"></i></a> 
+                                    <a href="" style="color: #2c40c1;"><i class="fa-solid fa-square"></i></a> 
+                                    <a href="" style="color: #ffffff;"><i class="fa-solid fa-square"></i></a> 
+                                    <a href="" style="color: #020202;"><i class="fa-solid fa-square"></i></a> 
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>   
+    </tbody>
+    <div class="footer1">
+        <div class="befor" > 
+            <img src="footer_ong(1).png" alt="">
+        </div>
+        <div class="footer  ">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                    <div class="after">
+                        <h5 style=" padding-left: 60px; margin-top: 40px; color: #ffffff;">TEN11 App</h5>
+                            <div class="title">
+                                <a href="" style="color: #ffffff; padding-left: 60px; "><i class="fa-solid fa-tablet-screen-button"></i> IOS App</a><br>
+                                <a href=""style="color: #ffffff; padding-left: 60px; "><i class="fa-solid fa-tablet-screen-button"></i> Android App</a>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="after">
+                            <h5 style="color: #ffffff; padding-left: 100px; margin-top: 40px;">Follow us</h5>      
+                            <div class="title">
+                                    <a href="" style="  padding-left: 100px;color: #ffffff;"><i class="fa-brands fa-square-facebook"></i> Facebook</a><br>
+                                    <a href="" style="  padding-left: 100px; color: #ffffff;"><i class="fa-brands fa-instagram"></i> Instagram</a><br>
+                                    <a href="" style="  padding-left: 100px; color: #ffffff;"><i class="fa-brands fa-tiktok"></i> TikTok</a>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+                        <div class="after">
+                            <h5 style="color: #ffffff; padding-left: 50px; margin-top: 40px;">Customer Services</h5>    
+                            <div class="title">
+                                <a href="" style="  padding-left: 20px; color: #ffffff;"><i class="fa-solid fa-circle-question"></i> Online exchange policy</a><br>
+                                <a href="" style="  padding-left: 50px; color: #ffffff;"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a><br>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xll-3 col-6">
+               <div class="after">
+                <h5 style="color: #ffffff; padding-left: 100px; margin-top: 40px;">We Accept</h5><br> 
+                    <div class="title">
+                        
+                        <div class="list_socail" style="color: #868181; padding-left:60px;">
+                            <img src="img/image_HTML/bank.png" alt="" style="width: 200px;">
+                        </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
